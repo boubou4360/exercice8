@@ -60,16 +60,16 @@ get_header();
             
             
             /* The 2nd Query (without global var) */
-            // $query2 = new WP_Query( $args2 );
+            $query2 = new WP_Query( $args2 );
             
-            // // The 2nd Loop
-            // while ( $query2->have_posts() ) {
-            //     $query2->the_post();
-            //     echo '<li>' . get_the_title( $query2->post->ID ) . '</li>';
-            // }
+            // The 2nd Loop
+            while ( $query2->have_posts() ) {
+                $query2->the_post();
+                echo '<li>' . get_the_title( $query2->post->ID ) . '</li>';
+            }
             
-            // Restore original Post Data
-           // wp_reset_postdata();
+            //Restore original Post Data
+           wp_reset_postdata();
             
             ?>
 
